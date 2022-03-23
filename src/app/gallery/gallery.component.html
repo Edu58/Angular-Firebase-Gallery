@@ -1,0 +1,8 @@
+
+<h2>Latest Photos</h2>
+<ul class="list-group-flush">
+    <li class="list-group-item" *ngFor="let image of images | async">
+        <a [routerLink]="['/image, image.$key']"></a>
+        <img class="img-fluid img-thumbnail" src="{{ image.$url }}" alt="your photo">
+    </li>
+</ul>
