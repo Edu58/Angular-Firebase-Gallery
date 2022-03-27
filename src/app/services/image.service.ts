@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { FirebaseApp } from '@angular/fire/app';
 import firebase from 'firebase/compat';
 import 'firebase/storage'
@@ -23,12 +23,12 @@ export class ImageService {
     })
   }
   
-  // getAllImages (): Observable<GalleryImage[]> {
-  //   return this.db.list('uploads')
-  // }
-
-  getAllImages (): Observable<GalleryImage[]> {
-    throw new Error( 'Method not implemented.' );
+  getAllImages ():  AngularFireList<GalleryImage[]> {
+    return this.db.list('uploads')
   }
+
+  // getAllImages (): Observable<GalleryImage[]> {
+  //   throw new Error( 'Method not implemented.' );
+  // }
 
 }

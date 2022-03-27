@@ -1,1 +1,11 @@
-<p>upload works!</p>
+<div class="container d-flex justify-content-center align-items-center">
+   <div class="card" style="width: 20rem;">
+       <div class="card-body">
+            <form class="d-flex flex-column">
+              <h2 class="card-header mb-5 text-center">Upload</h2>
+              <input type="file" class="form-control" (change)="handleFiles($event)" multiple>
+              <button class="btn btn-primary mt-4" (click)="uploadFiles()">Upload images</button>
+            </form>
+       </div>
+   </div>
+</div>

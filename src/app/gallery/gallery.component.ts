@@ -1,4 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
+import { AngularFireList } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { GalleryImage } from '../models/galleryImage.model';
 import { ImageService } from '../services/image.service';
@@ -10,7 +11,7 @@ import { ImageService } from '../services/image.service';
 })
 export class GalleryComponent implements OnInit, OnChanges {
 
-  images!: Observable<GalleryImage[]>
+  images!: any
 
   constructor(private imageService: ImageService) { }
 
